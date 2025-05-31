@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
 const surveySchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  surname: { type: String, required: true },
-  age: { type: Number, required: true },
-  date: { type: Date, required: true },
-  favoriteFood: [String],
+  fullName: { type: String, required: true },
+  email: { type: String, required: true },
+  dateOfBirth: { type: Date, required: true },
+  contactNumber: { type: String, required: true },
+  favoriteFood: [String], 
   ratings: {
-    eatOut: Number,
-    watchMovies: Number,
-    watchTV: Number,
-    listenToRadio: Number
+    eatOut: { type: Number, required: true },
+    watchMovies: { type: Number, required: true },
+    watchTV: { type: Number, required: true },
+    listenToRadio: { type: Number, required: true }
   }
 });
 
