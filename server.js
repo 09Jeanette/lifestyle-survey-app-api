@@ -11,7 +11,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-
+// Routes
+app.use('/api/surveys', require('./routes/surveyRoutes'));
 
 // Connect DB and start server
 connectDB();
