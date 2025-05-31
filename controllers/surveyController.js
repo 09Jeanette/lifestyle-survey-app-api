@@ -17,8 +17,6 @@ exports.submitSurvey = async (req, res) => {
   }
 };
 
-
-
 exports.getSurveyResults = async (req, res) => {
   try {
     const surveys = await Survey.find();
